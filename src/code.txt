@@ -1,0 +1,9 @@
+
+
+
+CREATE TABLE hola (
+	negro: INT,
+	sabe: INT,
+	CONSTRAINT CH_negro CHECK ( negro > 50 AND negro < 100)
+);
+
