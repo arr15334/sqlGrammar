@@ -5,7 +5,8 @@
 	"private": true,
 	"dependencies": {
 		"antlr4": "^4.7.1",
-		"antlr4-webpack-loader": "^0.1.1"
+		"antlr4-webpack-loader": "^0.1.1",
+		"moo": "^0.4.3"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",

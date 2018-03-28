@@ -1,6 +1,6 @@
 grammar sql92;
 
-program: (query)*
+program: (query ';' )*
     ;
 
 query: 'CREATE' 'DATABASE' ID
@@ -8,7 +8,7 @@ query: 'CREATE' 'DATABASE' ID
         | 'DROP' 'DATABASE' ID
         | 'SHOW' 'DATABASES'
         | 'USE' 'DATABASE' ID
-        | 'CREATE' 'TABLE' ID '(' (columnDeclaration (','columnDeclaration)*)* ',' (constraintDeclaration(','constraintDeclaration)*)* ')'
+        | 'CREATE' 'TABLE' ID ( '(' columnDeclaration (','columnDeclaration)*  (','constraintDeclaration)* ')' )?
         | 'ALTER' 'TABLE' ID 'RENAME' 'TO' ID
         | 'ALTER' 'TABLE' ID (action)?
         | 'DROP' 'TABLE' ID

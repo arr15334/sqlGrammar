@@ -14,6 +14,8 @@ sql92Visitor.prototype.constructor = sql92Visitor;
 
 // Visit a parse tree produced by sql92Parser#program.
 sql92Visitor.prototype.visitProgram = function(ctx) {
+  console.log("hola");
+  console.log(ctx);
   return this.visitChildren(ctx);
 };
 
